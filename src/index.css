@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-canvas: #09090B;
+  --color-surface: #18181B;
+  --color-surface-elevated: #202024;
+  --color-accent: #3B82F6;
+  --color-accent-light: #60A5FA;
+  --color-ink: #FAFAFA;
+  --color-ink-muted: #A1A1AA;
+  --color-border: #27272A;
+}
+
+@layer base {
+  html {
+    background-color: #09090B;
+    color: #FAFAFA;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  /* Optical compensation for light typography on dark backgrounds */
+  body {
+    letter-spacing: 0.005em;
+  }
+
+  /* Accessible keyboard focus rings */
+  :focus-visible {
+    outline: 2px solid #3B82F6;
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
