@@ -18,6 +18,7 @@ export const DEVELOPER_PROFILE = {
   headline: 'Building reliable software. Turning ideas into reality.',
   heroIntro:
     'I am a software developer with a background in Information Systems Management. Since 2022, I have focused on turning ideas into real software products through robust, reusable, and well-structured Full Stack and Backend engineering.',
+  photo: '/images/photo-sem-fundo.png',
   specifications: [
     {
       label: 'Primary Focus',
